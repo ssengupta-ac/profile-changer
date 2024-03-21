@@ -1,40 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The profile changer front end application. This is a simple application that:
+- Allows a user to signup by filling in a few details (path: /signup).
+- Allows a user to login (path: /) using the email and password they used while signing up.
+- Once logged in, the user is taken to their profile where they can add some additional details about themselves (path: /profile).
+- The profile page is only accessible if one is logged in. If they are not logged in then an error message is displayed.
+- There is a logout button on the profile page which logs them out.
 
-## Getting Started
+There is enough functionality to write some e2e tests. Some functionality does not work, this is intentional.
 
-First, run the development server:
+## Prerequisites
+Node.js v21+
+Backend services should be accessible locally on port 3001. CORS has been configured on the backend to allow requests from localhost:3000.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Local execution
+Open [http://localhost:3000/signup](http://localhost:3000/signup) with your browser to first sign up. Remember your email and password.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000/](http://localhost:3000/)
+to go to the login page. On a successful login you should be brought to your profile page.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The profile page can be directly accessed at http://localhost:3000/profile. You should see what happens when you try to access the page without logging in first.
