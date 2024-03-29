@@ -12,6 +12,8 @@ Node.js v21+
 Backend services should be accessible locally on port 3001. CORS has been configured on the backend to allow requests from localhost:3000.
 
 ## Local execution
+Start you front end by running `npm start`.
+
 Open [http://localhost:3000/signup](http://localhost:3000/signup) with your browser to first sign up. Remember your email and password.
 
 Then open [http://localhost:3000/](http://localhost:3000/)
